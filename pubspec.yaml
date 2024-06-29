@@ -38,6 +38,8 @@ dependencies:
   flutter_bloc: ^8.1.6
   flutter_screenutil: ^5.9.3
   easy_localization: ^3.0.7
+  google_fonts: ^6.2.1
+  flutter_svg: ^2.0.10+1
 
 dev_dependencies:
   flutter_test:

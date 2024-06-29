@@ -1,3 +1,12 @@
 {
-  "welcomeToStore": "مرحبا بك في متجرنا الخاص"
+  "welcomeToStore": "مرحبا بك في متجرنا الخاص",
+  "getYourGroceriesFastMsg": "احصل على مشترياتك من البقالة في أسرع وقت ممكن لمدة ساعة واحدة",
+  "getStarted": "هيا نبدأ",
+  "Login": "تسجيل الدخول",
+  "Signup": "انشاء حساب",
+  "enterYourCredential": "ادخل بياناتك الشخصيه",
+  "email": "البريد الالكتروني",
+  "password": "كلمة السر",
+  "forgotPassword": "هل نسيت كلمة السر",
+  "doNotHaveAnAccount": "ليس لديك حساب شخصي"
 }
