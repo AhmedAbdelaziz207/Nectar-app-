@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:groceries_app/view/screens/auth/login/login_screen.dart';
+import '../view/screens/auth/signup/signup_screen.dart';
 import '../view/screens/home/home_screen.dart';
 import '../view/screens/onboarding/onboarding_screen.dart';
 import '../view/screens/splash/splash_screen.dart';
@@ -25,6 +27,18 @@ class AppRouter {
        return MaterialPageRoute(
           builder: (BuildContext context) {
             return const OnboardingScreen();
+          },
+        );
+  case Routes.login:
+       return MaterialPageRoute(
+          builder: (BuildContext context) {
+            return const LoginScreen();
+          },
+        );
+  case Routes.signup:
+       return MaterialPageRoute(
+          builder: (BuildContext context) {
+            return const SignupScreen();
           },
         );
 

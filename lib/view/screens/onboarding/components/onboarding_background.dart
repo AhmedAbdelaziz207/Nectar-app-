@@ -12,7 +12,7 @@ class OnboardingBackground extends StatelessWidget {
       child: Stack(
         children: [
           Image.asset(
-            AppAssets.onboardingImagePath,
+            AppAssets.onboardingImage,
             width: double.infinity,
             fit: BoxFit.cover,
           ),

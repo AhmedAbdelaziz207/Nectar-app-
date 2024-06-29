@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:groceries_app/themes/app_colors.dart';
 import 'package:groceries_app/utils/constants/app_assets.dart';
 import 'package:groceries_app/utils/constants/locale_keys.g.dart';
+import 'package:groceries_app/utils/constants/routes.dart';
 import 'package:groceries_app/view/screens/onboarding/components/onboarding_background.dart';
 
 class OnboardingScreen extends StatelessWidget {
@@ -16,11 +17,14 @@ class OnboardingScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
-            Image.asset(AppAssets.splashIconPath),
+            Image.asset(AppAssets.splashIcon),
             Text(
               LocaleKeys.welcomeToStore.tr(),
-              style:
-                  TextStyle(fontSize: 48.sp, fontWeight: FontWeight.w500, color: AppColors.white),
+              style: TextStyle(
+                fontSize: 48.sp,
+                fontWeight: FontWeight.w500,
+                color: AppColors.white,
+              ),
               textAlign: TextAlign.center,
             ),
             Text(
@@ -31,7 +35,9 @@ class OnboardingScreen extends StatelessWidget {
               height: 40.h,
             ),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pushNamed(context, Routes.login );
+              },
               child: Text(
                 LocaleKeys.getStarted.tr(),
                 style: const TextStyle(

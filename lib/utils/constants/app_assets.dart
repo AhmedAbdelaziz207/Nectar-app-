@@ -1,6 +1,7 @@
 class AppAssets{
-  static const translationsPath = "assets/translations";
-  static const splashIconPath = "assets/icons/splash_icon.png";
-  static const onboardingImagePath = "assets/images/onboarding_bg.png";
+  static const appLogo = "assets/icons/app_logo.svg";
+  static const splashIcon = "assets/icons/splash_icon.png";
+  static const onboardingImage = "assets/images/onboarding_bg.png";
+  static const translations = "assets/translations";
 
 }

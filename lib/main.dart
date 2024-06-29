@@ -20,7 +20,7 @@ main() async {
         Locale("ar"),
       ],
       fallbackLocale: const Locale("en"),
-      path: AppAssets.translationsPath,
+      path: AppAssets.translations,
       child: NectarApp(appRouter: appRouter ,),
     ),
   );

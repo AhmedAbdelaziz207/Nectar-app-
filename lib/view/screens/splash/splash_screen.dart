@@ -18,7 +18,7 @@ class _SplashScreenState extends State<SplashScreen> {
     // TODO: implement initState
     super.initState();
     Future.delayed(const Duration(seconds: 3),(){
-      Navigator.pushNamed(context, Routes.onboarding );
+      Navigator.pushNamedAndRemoveUntil(context, Routes.onboarding, (route) => false);
     });
 
   }
@@ -32,7 +32,7 @@ class _SplashScreenState extends State<SplashScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             // splash icon
-            Image.asset(AppAssets.splashIconPath),
+            Image.asset(AppAssets.splashIcon),
             SizedBox(
               width: 8.w,
             ),
