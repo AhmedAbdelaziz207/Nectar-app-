@@ -10,18 +10,23 @@ import 'package:groceries_app/view/screens/app/groceries_app.dart';
 
  */
 main() async {
+
+
+
   WidgetsFlutterBinding.ensureInitialized();
   await EasyLocalization.ensureInitialized();
   AppRouter appRouter = AppRouter();
+
+
   runApp(
     EasyLocalization(
       supportedLocales: const [
         Locale("en"),
         Locale("ar"),
       ],
+      startLocale: Locale("en"),
       fallbackLocale: const Locale("en"),
       path: AppAssets.translations,
-      child: NectarApp(appRouter: appRouter ,),
-    ),
-  );
+      child: NectarApp(appRouter: appRouter,),
+  ),);
 }

@@ -1,4 +1,5 @@
 import 'package:easy_localization/easy_localization.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
@@ -17,8 +18,10 @@ class HomeTopBar extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(Icons.location_on),
-            SizedBox(height: 8.h,),
+            const Icon(Icons.location_on),
+            SizedBox(
+              height: 8.h,
+            ),
             Text(
               LocaleKeys.homeLocation.tr(),
               style: Theme.of(context).textTheme.titleSmall,

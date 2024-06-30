@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:groceries_app/utils/constants/locale_keys.g.dart';
@@ -18,7 +19,7 @@ class HomeSearchBar extends StatelessWidget {
         decoration: InputDecoration(
           contentPadding: EdgeInsets.symmetric(horizontal: 8.w),
           filled: true,
-          hintText: LocaleKeys.searchStore,
+          hintText: LocaleKeys.searchStore.tr(),
           hintStyle: Theme.of(context).textTheme.bodySmall?.copyWith(color: AppColors.grey),
           fillColor: AppColors.lightGrey,
           prefixIcon: const Icon(

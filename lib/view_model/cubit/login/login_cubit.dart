@@ -18,6 +18,10 @@ class LoginCubit extends Cubit<LoginState> {
     emit(LoginPasswordVisibilityToggled(isPasswordVisible));
   }
 
+  void navigateToSignupScreen(){
+    emit(LoginNavigationToSignup());
+  }
+
   Future<void> login() async {
     emit(LoginLoading());
 

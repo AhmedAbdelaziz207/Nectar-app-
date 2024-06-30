@@ -19,7 +19,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: HomeBottomNavigation(),
+      bottomNavigationBar: const HomeBottomNavigation(),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(

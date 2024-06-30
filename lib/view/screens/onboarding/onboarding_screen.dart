@@ -27,15 +27,19 @@ class OnboardingScreen extends StatelessWidget {
               ),
               textAlign: TextAlign.center,
             ),
-            Text(
-              LocaleKeys.getYourGroceriesFastMsg.tr(),
-              style: const TextStyle(color: AppColors.grey),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 8.0),
+              child: Text(
+                LocaleKeys.getYourGroceriesFastMsg.tr(),
+                style: const TextStyle(color: AppColors.grey),
+              ),
             ),
             SizedBox(
               height: 40.h,
             ),
             ElevatedButton(
               onPressed: () {
+
                 Navigator.pushNamed(context, Routes.login );
               },
               child: Text(

@@ -32,35 +32,27 @@ class LoginScreen extends StatelessWidget {
               child: BlocListener<LoginCubit, LoginState>(
                 listener: (context, state) {
                   if (state is LoginSuccess) {
-                    hideLoadingDialog(context);
-                    Navigator.pushNamed(context, Routes.home);
+                    handleLoginSuccess(
+                      context,
+                    );
                   } else if (state is LoginFailure) {
-                    hideLoadingDialog(context);
-                    showDialog(
-                      context: context,
-                      builder: (BuildContext context) {
-                        return AlertDialog(
-                          title: const Text("Error"),
-                          content: Text(state.error),
-                        );
-                      },
+                    handleFailureState(
+                      context,
+                      state.error
                     );
                   } else if (state is LoginLoading) {
-                    showDialog(
-                      context: context,
-                      builder: (context) {
-                        return const Center(
-                          child: CircularProgressIndicator(),
-                        );
-                      },
+                    handleLoadingState(
+                      context,
                     );
+                  }else if(state is LoginNavigationToSignup ){
+                    handleNavigation(context);
                   }
+
                   ;
                 },
                 child: const LoginForm(),
               ),
             ),
-
           ],
         ),
       ),
@@ -69,5 +61,41 @@ class LoginScreen extends StatelessWidget {
 
   void hideLoadingDialog(BuildContext context) {
     Navigator.of(context).pop();
+  }
+
+  void handleLoadingState(context) {
+    showDialog(
+      context: context,
+      builder: (context) {
+        return const Center(
+          child: CircularProgressIndicator(),
+        );
+      },
+    );
+  }
+
+  void handleFailureState(context, errorMessage) {
+    hideLoadingDialog(context);
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: const Text("Error"),
+          content: Text(errorMessage),
+        );
+      },
+    );
+  }
+
+  void handleLoginSuccess(context) {
+    hideLoadingDialog(context);
+    Navigator.pushNamed(
+      context,
+      Routes.home,
+    );
+  }
+
+  void handleNavigation(BuildContext context) {
+    Navigator.pushNamed(context, Routes.signup);
   }
 }
