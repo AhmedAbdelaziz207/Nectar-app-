@@ -1,6 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:groceries_app/utils/app_router.dart';
+import 'package:groceries_app/utils/router/app_router.dart';
 import 'package:groceries_app/utils/constants/app_assets.dart';
 import 'package:groceries_app/view/screens/app/groceries_app.dart';
 

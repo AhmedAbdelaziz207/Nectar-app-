@@ -2,7 +2,8 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:groceries_app/themes/light_mode.dart';
-import 'package:groceries_app/utils/app_router.dart';
+import 'package:groceries_app/themes/night_mode.dart';
+import 'package:groceries_app/utils/router/app_router.dart';
 import 'package:groceries_app/utils/constants/routes.dart';
 import 'package:groceries_app/view/screens/splash/splash_screen.dart';
 class NectarApp extends StatelessWidget {
@@ -22,6 +23,7 @@ class NectarApp extends StatelessWidget {
           onGenerateRoute : appRouter.generateRoute ,
           initialRoute: Routes.splash ,
           theme: LightTheme.lightTheme ,
+          darkTheme: NightMode.nightTheme ,
         );
 
       },

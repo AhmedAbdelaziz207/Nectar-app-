@@ -14,7 +14,7 @@ class AppTextStyles {
   static final TextStyle subtitle = GoogleFonts.poppins(
     fontSize: 16.sp,
     fontWeight: FontWeight.normal,
-    color: AppColors.black54,
+    color: AppColors.black,
   );
 
   static final TextStyle label = GoogleFonts.poppins(
