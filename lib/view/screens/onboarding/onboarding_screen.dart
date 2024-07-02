@@ -2,10 +2,11 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:groceries_app/themes/app_colors.dart';
-import 'package:groceries_app/utils/constants/app_assets.dart';
-import 'package:groceries_app/utils/constants/locale_keys.g.dart';
-import 'package:groceries_app/utils/constants/routes.dart';
 import 'package:groceries_app/view/screens/onboarding/components/onboarding_background.dart';
+
+import '../../../view_model/utils/constants/app_assets.dart';
+import '../../../view_model/utils/constants/locale_keys.g.dart';
+import '../../../view_model/utils/constants/routes.dart';
 
 class OnboardingScreen extends StatelessWidget {
   const OnboardingScreen({super.key});

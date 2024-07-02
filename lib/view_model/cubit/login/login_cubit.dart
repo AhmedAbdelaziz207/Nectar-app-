@@ -8,14 +8,14 @@ class LoginCubit extends Cubit<LoginState> {
   LoginCubit() : super(LoginInitial());
   var emailController = TextEditingController();
   var passwordController = TextEditingController();
-  bool isPasswordVisible = false ;
+  bool _isPasswordVisible = false ;
 
 
 
   void togglePasswordVisibility() {
 
-    isPasswordVisible = !isPasswordVisible;
-    emit(LoginPasswordVisibilityToggled(isPasswordVisible));
+    _isPasswordVisible = !_isPasswordVisible;
+    emit(LoginPasswordVisibilityToggled(_isPasswordVisible));
   }
 
   void navigateToSignupScreen(){
@@ -34,11 +34,5 @@ class LoginCubit extends Cubit<LoginState> {
     }
   }
 
-  @override
-  Future<void> close() {
-    emailController.dispose();
-    passwordController.dispose();
-    return super.close();
-  }
 
 }

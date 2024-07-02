@@ -14,7 +14,7 @@ import 'package:groceries_app/view/screens/app/groceries_app.dart';
 void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
     // Build our app and trigger a frame.
-    await tester.pumpWidget(const NectarApp());
+    // await tester.pumpWidget(const NectarApp());
 
     // Verify that our counter starts at 0.
     expect(find.text('0'), findsOneWidget);

@@ -19,11 +19,14 @@
   "seeAll": "عرض الكل",
   "exclusiveOffer": "عروض خاصه",
   "userName": "اسم المستخدم",
-  "bestSelling" : "الاعلي مبيعا",
+  "bestSelling": "الاعلي مبيعا",
   "alreadyHaveAnAccount": "بالفعل تملك حساب؟",
   "byAgree": "بالمتابعة، أنت توافق على ",
-  "serviceConditions":"شروط الخدمة",
+  "serviceConditions": "شروط الخدمة",
   "and": "و ",
   "ourPrivacy": " سياسة الخصوصية الخاصة بنا",
-  "enterYourCredentials": "قم بادخل بياناتك الخاصه"
+  "enterYourCredentials": "قم بادخل بياناتك الخاصه",
+  "invalidUsername": "اسم المستخدم غير صالح",
+  "invalidEmail": "البريد الإلكتروني غير صالح",
+  "invalidPassword": "كلمة المرور غير صالحة"
 }

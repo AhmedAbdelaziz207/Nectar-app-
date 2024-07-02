@@ -25,6 +25,9 @@
   "serviceConditions":"Terms of Service",
   "and": "and ",
   "ourPrivacy": "Privacy Policy.",
-  "enterYourCredentials": "Enter your credentials to continue"
+  "enterYourCredentials": "Enter your credentials to continue",
+  "invalidUsername": "Invalid username ",
+  "invalidEmail": "Invalid email ",
+  "invalidPassword": "Invalid password "
 
 }

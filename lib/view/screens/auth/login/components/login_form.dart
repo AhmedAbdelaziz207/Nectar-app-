@@ -2,10 +2,10 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:groceries_app/utils/constants/locale_keys.g.dart';
 import 'package:groceries_app/view_model/cubit/login/login_cubit.dart';
 
 import '../../../../../themes/app_colors.dart';
+import '../../../../../view_model/utils/constants/locale_keys.g.dart';
 
 class LoginForm extends StatelessWidget {
   const LoginForm({super.key});
@@ -45,7 +45,7 @@ class LoginForm extends StatelessWidget {
                   state is LoginPasswordVisibilityToggled ? state.isPasswordVisible : false;
 
               return TextFormField(
-                obscureText: !(context.read<LoginCubit>().isPasswordVisible),
+                obscureText: !(isPasswordVisible),
                 controller: context.read<LoginCubit>().passwordController,
                 style: Theme.of(context).textTheme.bodySmall,
                 decoration: InputDecoration(
