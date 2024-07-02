@@ -1,3 +1,4 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -5,6 +6,7 @@ import 'package:groceries_app/view/screens/home/components/home_bottom_navigatio
 import 'package:groceries_app/view/screens/home/components/home_product_list_item.dart';
 import 'package:groceries_app/view/screens/home/components/home_promotion_header.dart';
 import 'package:groceries_app/view/screens/home/components/home_search_bar.dart';
+import 'package:groceries_app/view/screens/home/components/home_slider.dart';
 import 'package:groceries_app/view/screens/home/components/home_top_bar.dart';
 
 import '../../../view_model/utils/constants/app_assets.dart';
@@ -28,9 +30,12 @@ class HomeScreen extends StatelessWidget {
               ),
               const HomeSearchBar(),
               SizedBox(
-                height: 12.h,
+                height: 8.h,
               ),
-              Image.asset(AppAssets.homeBanner),
+
+              const HomeSlider(),
+
+              //   Image.asset(AppAssets.homeBanner),
               HomePromotionHeader(
                 headerName: LocaleKeys.exclusiveOffer.tr(),
               ),
@@ -42,7 +47,7 @@ class HomeScreen extends StatelessWidget {
                 width: double.infinity,
                 child: ListView(
                   scrollDirection: Axis.horizontal,
-                  children:const [
+                  children: const [
                     HomeProductListItem(),
                     HomeProductListItem(),
                     HomeProductListItem(),
@@ -52,7 +57,7 @@ class HomeScreen extends StatelessWidget {
                   ],
                 ),
               ),
-          
+
               HomePromotionHeader(
                 headerName: LocaleKeys.bestSelling.tr(),
               ),
@@ -64,7 +69,7 @@ class HomeScreen extends StatelessWidget {
                 width: double.infinity,
                 child: ListView(
                   scrollDirection: Axis.horizontal,
-                  children:const [
+                  children: const [
                     HomeProductListItem(),
                     HomeProductListItem(),
                     HomeProductListItem(),
