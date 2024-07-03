@@ -23,7 +23,6 @@ class NectarApp extends StatelessWidget {
           onGenerateRoute : appRouter.generateRoute ,
           initialRoute: Routes.splash ,
           theme: LightTheme.lightTheme ,
-          locale: Locale("en"),
           darkTheme: NightMode.nightTheme ,
         );
 

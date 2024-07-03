@@ -1,4 +1,3 @@
-import 'package:carousel_slider/carousel_slider.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -8,8 +7,6 @@ import 'package:groceries_app/view/screens/home/components/home_promotion_header
 import 'package:groceries_app/view/screens/home/components/home_search_bar.dart';
 import 'package:groceries_app/view/screens/home/components/home_slider.dart';
 import 'package:groceries_app/view/screens/home/components/home_top_bar.dart';
-
-import '../../../view_model/utils/constants/app_assets.dart';
 import '../../../view_model/utils/constants/locale_keys.g.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -42,7 +39,7 @@ class HomeScreen extends StatelessWidget {
               SizedBox(
                 height: 12.h,
               ),
-              Container(
+              SizedBox(
                 height: 300.h,
                 width: double.infinity,
                 child: ListView(
@@ -64,7 +61,7 @@ class HomeScreen extends StatelessWidget {
               SizedBox(
                 height: 12.h,
               ),
-              Container(
+              SizedBox(
                 height: 300.h,
                 width: double.infinity,
                 child: ListView(

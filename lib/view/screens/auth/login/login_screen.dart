@@ -1,7 +1,4 @@
-import 'package:easy_localization/easy_localization.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:groceries_app/view/screens/auth/login/components/login_form.dart';
@@ -44,7 +41,6 @@ class LoginScreen extends StatelessWidget {
                     handleNavigation(context);
                   }
 
-                  ;
                 },
                 child: const LoginForm(),
               ),
