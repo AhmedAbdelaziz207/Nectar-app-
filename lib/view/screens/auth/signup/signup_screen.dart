@@ -14,23 +14,25 @@ class SignupScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
-        child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 12.w),
-          child: Column(
-            children: [
-              GradientBackground(
-                child: SvgPicture.asset(
-                  AppAssets.appLogo,
+      body: SingleChildScrollView(
+        child: SafeArea(
+          child: Padding(
+            padding: EdgeInsets.symmetric(horizontal: 12.w),
+            child: Column(
+              children: [
+                GradientBackground(
+                  child: SvgPicture.asset(
+                    AppAssets.appLogo,
+                  ),
                 ),
-              ),
-              BlocListener<SignupCubit, SignupState>(
-                listener: (BuildContext context, SignupState state) {
-                  handleStates(state, context);
-                },
-                child: const SignupForm(),
-              )
-            ],
+                BlocListener<SignupCubit, SignupState>(
+                  listener: (BuildContext context, SignupState state) {
+                    handleStates(state, context);
+                  },
+                  child: const SignupForm(),
+                )
+              ],
+            ),
           ),
         ),
       ),

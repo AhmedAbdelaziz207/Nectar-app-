@@ -13,39 +13,37 @@ class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            GradientBackground(
-              child: SvgPicture.asset(AppAssets.appLogo),
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 16.0),
-              child: BlocListener<LoginCubit, LoginState>(
-                listener: (context, state) {
-                  if (state is LoginSuccess) {
-                    handleLoginSuccess(
-                      context,
-                    );
-                  } else if (state is LoginFailure) {
-                    handleFailureState(
-                      context,
-                      state.error
-                    );
-                  } else if (state is LoginLoading) {
-                    handleLoadingState(
-                      context,
-                    );
-                  }else if(state is LoginNavigationToSignup ){
-                    handleNavigation(context);
-                  }
-
-                },
-                child: const LoginForm(),
+      body: SingleChildScrollView(
+        child: SafeArea(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              GradientBackground(
+                child: SvgPicture.asset(AppAssets.appLogo),
               ),
-            ),
-          ],
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                child: BlocListener<LoginCubit, LoginState>(
+                  listener: (context, state) {
+                    if (state is LoginSuccess) {
+                      handleLoginSuccess(
+                        context,
+                      );
+                    } else if (state is LoginFailure) {
+                      handleFailureState(context, state.error);
+                    } else if (state is LoginLoading) {
+                      handleLoadingState(
+                        context,
+                      );
+                    } else if (state is LoginNavigationToSignup) {
+                      handleNavigation(context);
+                    }
+                  },
+                  child: const LoginForm(),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
@@ -83,7 +81,7 @@ class LoginScreen extends StatelessWidget {
     hideLoadingDialog(context);
     Navigator.pushNamed(
       context,
-       Routes.home,
+      Routes.home,
     );
   }
 
