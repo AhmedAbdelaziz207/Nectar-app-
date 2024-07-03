@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-
-import '../../../../utils/constants/app_assets.dart';
+import '../../../../view_model/utils/constants/app_assets.dart';
 
 class OnboardingBackground extends StatelessWidget {
   const OnboardingBackground({super.key, this.child});

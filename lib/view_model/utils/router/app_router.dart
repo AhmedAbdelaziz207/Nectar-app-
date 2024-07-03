@@ -2,10 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:groceries_app/view/screens/auth/login/login_screen.dart';
 import 'package:groceries_app/view_model/cubit/login/login_cubit.dart';
-import '../../view/screens/auth/signup/signup_screen.dart';
-import '../../view/screens/home/home_screen.dart';
-import '../../view/screens/onboarding/onboarding_screen.dart';
-import '../../view/screens/splash/splash_screen.dart';
+import 'package:groceries_app/view_model/cubit/signup/signup_cubit.dart';
+import '../../../view/screens/auth/signup/signup_screen.dart';
+import '../../../view/screens/home/home_screen.dart';
+import '../../../view/screens/onboarding/onboarding_screen.dart';
+import '../../../view/screens/splash/splash_screen.dart';
 import '../constants/routes.dart';
 
 class AppRouter {
@@ -34,13 +35,20 @@ class AppRouter {
       case Routes.login:
         return MaterialPageRoute(
           builder: (BuildContext context) {
-            return BlocProvider(create: (context) => LoginCubit(), child: const LoginScreen());
+            return BlocProvider(
+              create: (context) => LoginCubit(),
+              child: const LoginScreen(),
+            );
           },
         );
       case Routes.signup:
         return MaterialPageRoute(
           builder: (BuildContext context) {
-            return const SignupScreen();
+            return BlocProvider(
+                create: (BuildContext context) {
+                  return SignupCubit();
+                },
+                child: const SignupScreen());
           },
         );
 

@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../themes/app_colors.dart';
-import '../../../../utils/constants/locale_keys.g.dart';
+import '../../../../view_model/utils/constants/locale_keys.g.dart';
 
 class HomeBottomNavigation extends StatelessWidget {
   const HomeBottomNavigation({super.key});

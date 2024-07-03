@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:groceries_app/themes/light_mode.dart';
 import 'package:groceries_app/themes/night_mode.dart';
-import 'package:groceries_app/utils/router/app_router.dart';
-import 'package:groceries_app/utils/constants/routes.dart';
-import 'package:groceries_app/view/screens/splash/splash_screen.dart';
+
+import '../../../view_model/utils/constants/routes.dart';
+import '../../../view_model/utils/router/app_router.dart';
 class NectarApp extends StatelessWidget {
   const NectarApp({super.key, required this.appRouter});
   final AppRouter appRouter;

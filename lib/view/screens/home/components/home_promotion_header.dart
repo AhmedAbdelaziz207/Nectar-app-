@@ -1,8 +1,8 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:groceries_app/utils/constants/locale_keys.g.dart';
 
 import '../../../../themes/app_colors.dart';
+import '../../../../view_model/utils/constants/locale_keys.g.dart';
 
 class HomePromotionHeader extends StatelessWidget {
   const HomePromotionHeader({super.key, required this.headerName});

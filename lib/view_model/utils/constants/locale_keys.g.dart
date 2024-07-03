@@ -6,7 +6,7 @@ abstract class  LocaleKeys {
   static const getStarted = 'getStarted';
   static const login = 'login';
   static const signup = 'signup';
-  static const enterYourCredential = 'enterYourCredential';
+  static const enterYourEmailAndPassword = 'enterYourEmailAndPassword';
   static const email = 'email';
   static const password = 'password';
   static const forgotPassword = 'forgotPassword';
@@ -20,6 +20,16 @@ abstract class  LocaleKeys {
   static const searchStore = 'searchStore';
   static const seeAll = 'seeAll';
   static const exclusiveOffer = 'exclusiveOffer';
+  static const userName = 'userName';
   static const bestSelling = 'bestSelling';
+  static const alreadyHaveAnAccount = 'alreadyHaveAnAccount';
+  static const byAgree = 'byAgree';
+  static const serviceConditions = 'serviceConditions';
+  static const and = 'and';
+  static const ourPrivacy = 'ourPrivacy';
+  static const enterYourCredentials = 'enterYourCredentials';
+  static const invalidUsername = 'invalidUsername';
+  static const invalidEmail = 'invalidEmail';
+  static const invalidPassword = 'invalidPassword';
 
 }
